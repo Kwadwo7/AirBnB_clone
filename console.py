@@ -49,9 +49,9 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
             print(obj_instance.id)
         elif not line:
-            print(f'** class name is missing **')
+            print(f'** class name missing **')
         else:
-            print("** class name doesn't exist **")
+            print("** class doesn't exist **")
 
     def do_show(self, line):
         """Display the string representation of a
@@ -63,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
             if line[0] not in HBNBCommand.__all_classes:
                 print("** class doesn't exist **")
             elif len(line) == 1:
-                print("** instance id is missing **")
+                print("** instance id missing **")
             elif f"{line[0]}.{line[1]}" not in file_1:
                 print("** no instance found **")
             else:
@@ -79,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
             if line[0] not in HBNBCommand.__all_classes:
                 print("** class doesn't exist **")
             elif len(line) == 1:
-                print("** instance id is missing **")
+                print("** instance id missing **")
             elif f"{line[0]}.{line[1]}" not in file_1:
                 print("** no instance found **")
             else:
@@ -114,7 +114,7 @@ class HBNBCommand(cmd.Cmd):
         if line:
             line = line.split(' ')
             if line[0] not in HBNBCommand.__all_classes:
-                print("** class name doesn't exist **")
+                print("** class doesn't exist **")
             elif len(line) == 1:
                 print('** instance id missing **')
             elif f"{line[0]}.{line[1]}" not in file_1:

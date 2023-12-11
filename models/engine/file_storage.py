@@ -54,6 +54,6 @@ class FileStorage:
                     data_3 = i["__class__"]
                     del i["__class__"]
                     class_object = definedClass[data_3]
-                    return self.new(class_object(**i))
+                    self.new(class_object(**i))
         except FileNotFoundError:
             pass
