@@ -4,14 +4,15 @@ import json
 
 
 class FileStorage:
-    """Represent an abstracted storage engine."""
+    """Represent an abstracted storage engine.
 
-        """ Attributes:
+     Attributes:
         __file_path (str): The name of the file to save objects to.
-        __objects (dict): A dictionary of instantiated objects."""
+        __objects (dict): A dictionary of instantiated objects.
+    """
 
-        __file_path = 'file.json'
-        __objects = {}
+    __file_path = 'file.json'
+    __objects = {}
 
     def all(self):
         """Return the dictionary __objects."""
@@ -24,9 +25,9 @@ class FileStorage:
     def save(self):
         """Serialize __objects to the JSON file __file_path."""
         serialize_string = {}
-        for i, j in self.__objects.items():
+        for i, j in FileStorage.__objects.items():
             serialize_string[i] = j.to_dict()
-            with open(FileStorage.__file_path, "w") as data:
+            with open(FileStorage.__file_path, "w", encoding="utf-8") as data:
                 json.dump(serialize_string, data)
 
     def reload(self):
@@ -47,7 +48,7 @@ class FileStorage:
                         'Review': Review
                         }
         try:
-            with open(FileStorage.__file_path) as data:
+            with open(FileStorage.__file_path, encoding="utf-8") as data:
                 data_2 = json.load(data)
                 for i in data_2.values():
                     data_3 = i["__class__"]

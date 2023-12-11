@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines the HBnB console."""
+
 import cmd
 from models import storage
 from models.base_model import BaseModel
@@ -35,6 +36,10 @@ class HBNBCommand(cmd.Cmd):
         """EOF signal to quit the program"""
         print("")
         return True
+
+    def emptyline(self):
+        """Do nothing when an empty line is received"""
+        pass
 
     def do_create(self, line):
         """Create a new class instance and print its id."""
