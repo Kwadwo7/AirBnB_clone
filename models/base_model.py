@@ -4,7 +4,6 @@
 import uuid
 import datetime
 from models import storage
-import time
 
 
 class BaseModel:
@@ -20,13 +19,13 @@ class BaseModel:
             **kwargs (dict): Key/value pairs of attributes.
         """
         if len(kwargs) != 0:
+            del kwargs['__class__']
             for i, j in kwargs.items():
-                if i != '__class__':
-                    if i == 'created_at' or i == 'updated_at':
-                        d_time_obj = datetime.datetime.fromisoformat(j)
-                        setattr(self, i, d_time_obj)
-                    else:
-                        setattr(self, i, j)
+                if i == 'created_at' or i == 'updated_at':
+                    d_time_obj = datetime.datetime.fromisoformat(j)
+                    setattr(self, i, d_time_obj)
+                else:
+                    setattr(self, i, j)
 
         else:
             self.id = str(uuid.uuid4())
@@ -36,11 +35,10 @@ class BaseModel:
 
     def __str__(self):
         """Return the str representation of the BaseModel instance."""
-        return f'{[self.__class__.__name__]}({self.id}){self.__dict__}'
+        return f'[{self.__class__.__name__}] ({self.id}) {self.__dict__}'
 
     def save(self):
         """Update updated_at with the current datetime."""
-        time.sleep(0.0001)
         updated_at = datetime.datetime.now()
         storage.save()
 

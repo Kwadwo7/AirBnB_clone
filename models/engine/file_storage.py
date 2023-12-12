@@ -6,11 +6,10 @@ import json
 class FileStorage:
     """Represent an abstracted storage engine.
 
-     Attributes:
-        __file_path (str): The name of the file to save objects to.
-        __objects (dict): A dictionary of instantiated objects.
-    """
-
+        Attributes:
+            __file_path (str): The name of the file to save objects to.
+            __objects (dict): A dictionary of instantiated objects.
+        """
     __file_path = 'file.json'
     __objects = {}
 
@@ -39,6 +38,7 @@ class FileStorage:
         from models.state import State
         from models.amenity import Amenity
         from models.review import Review
+
         definedClass = {'BaseModel': BaseModel,
                         'User': User,
                         'Place': Place,
@@ -52,7 +52,6 @@ class FileStorage:
                 data_2 = json.load(data)
                 for i in data_2.values():
                     data_3 = i["__class__"]
-                    del i["__class__"]
                     class_object = definedClass[data_3]
                     self.new(class_object(**i))
         except FileNotFoundError:
