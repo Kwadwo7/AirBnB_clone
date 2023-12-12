@@ -10,13 +10,7 @@ class User(BaseModel):
     4 arguments.
     """
 
-    def __init__(self, *args, **kwargs):
-        """Initializes attributes inherited from
-        Basemodel by caller the super and __init__
-        methods"""
-
-        super().__init__()
-        self.email = " "
-        self.password = " "
-        self.first_name = " "
-        self.last_name = " "
+    email = " "
+    password = " "
+    first_name = " "
+    last_name = " "

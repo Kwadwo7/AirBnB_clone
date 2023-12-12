@@ -9,10 +9,4 @@ class State(BaseModel):
     parameter called name
     """
 
-    def __init__(self, *args, **kwargs):
-        """Initializes the inherited attributes and
-        methods by calling super and __init__ methods
-        , and the name attribute too."""
-
-        super().__init__()
-        self.name = " "
+    name = " "

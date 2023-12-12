@@ -9,11 +9,5 @@ class City(BaseModel):
     2 class attributes.
     """
 
-    def __init__(self, *args, **kwargs):
-        """Initializes the class attributes, and the
-        inherited ones by calling the super and
-        __init__ methods."""
-
-        super().__init__()
-        self.state_id = " "
-        self.name = " "
+    state_id = " "
+    name = " "

@@ -9,10 +9,4 @@ class Amenity(BaseModel):
     attribute.
     """
 
-    def __init__(self, *args, **kwargs):
-        """Initializes the name attribute, and the
-        inherited ones by calling the super and
-        __init__ methods."""
-
-        super().__init__()
-        self.name = " "
+    name = " "
