@@ -8,6 +8,6 @@ class Review(BaseModel):
     """Review inherits from Basemodel and takes 3
     additional attributes.
     """
-    place_id = " "
-    user_id = " "
-    text = " "
+    place_id = ""
+    user_id = ""
+    text = ""

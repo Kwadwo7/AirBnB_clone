@@ -10,7 +10,7 @@ class User(BaseModel):
     4 arguments.
     """
 
-    email = " "
-    password = " "
-    first_name = " "
-    last_name = " "
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""

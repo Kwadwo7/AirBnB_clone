@@ -9,5 +9,5 @@ class City(BaseModel):
     2 class attributes.
     """
 
-    state_id = " "
-    name = " "
+    state_id = ""
+    name = ""

@@ -9,4 +9,4 @@ class State(BaseModel):
     parameter called name
     """
 
-    name = " "
+    name = ""
