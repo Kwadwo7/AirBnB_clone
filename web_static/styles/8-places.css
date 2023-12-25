@@ -1,0 +1,113 @@
+#title {
+  font-size: 30px;
+  text-align: left;
+}
+.places article {
+  width: 390px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ff5a5f;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+}
+article h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 0;
+}
+.places {
+  text-align: center;
+}
+article h2 {
+  font-size: 30px;
+  margin-top: -1px;
+  padding-left: 0%;
+}
+.price_by_night {
+  color: #ff5a5f;
+  border: 4px solid #ff5a5f;
+  min-width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 90px;
+  display: grid;
+  place-content: center;
+  padding: 5px;
+}
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home_title {
+  display: inline-block;
+  position: relative;
+  left: 40px;
+}
+#pb1 {
+  display: inline-block;
+  position: relative;
+  left: 75px;
+  display: grid;
+  place-content: center;
+  padding: 5px;
+}
+#pb2 {
+  display: inline-block;
+  position: relative;
+  left: 105px;
+  display: grid;
+  place-content: center;
+  padding: 5px;
+}
+.information {
+  height: 80px;
+  border-top: solid #dddddd 1px;
+  border-bottom: solid #dddddd 1px;
+  display: flex;
+  justify-content: space-around;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.max_guest {
+  width: 100px;
+  background-image: url(../images/max_guest.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.number_rooms {
+  width: 100px;
+  background-image: url(../images/num_rooms.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.number_bathrooms {
+  width: 100px;
+  background-image: url(../images/num_bathrooms.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.user {
+  margin-top: 16px;
+  text-align: left;
+}
+.description {
+  margin-top: 8px;
+  text-align: left;
+}
